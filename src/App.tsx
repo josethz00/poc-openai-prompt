@@ -58,7 +58,7 @@ function App() {
             justifyContent: 'center',
           }}
         >
-          <textarea id="answer-box" placeholder='... ' onChange={(e) => setQuestion(e.target.value)} disabled value={answer} />
+          <textarea id="answer-box" placeholder='Here goes the answer... ' onChange={(e) => setQuestion(e.target.value)} disabled value={answer} />
         </div>
         <button id="ask-btn" onClick={getAnswerFromOpenAI}>
           Ask
