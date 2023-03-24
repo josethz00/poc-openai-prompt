@@ -2,9 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import openAiLogo from './assets/openai.png'
 import './App.css'
+import { OpenAI } from 'langchain/llms'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [key, setKey] = useState('')
+  const [question, setQuestion] = useState('')
 
   return (
     <div className="App">
@@ -19,8 +21,8 @@ function App() {
       <h1>AI Questions & Answers</h1>
       <div className="card">
         <div className="input-card">
-          <input type="text" placeholder='Paste you API Key here... ' />
-          <button onClick={() => setCount((count) => count + 1)}>
+          <input type="text" placeholder='Paste you API Key here... ' onChange={(e) => setKey(e.target.value)} />
+          <button onClick={() => {}}>
             Save key
           </button>
         </div>
@@ -31,7 +33,7 @@ function App() {
             justifyContent: 'center',
           }}
         >
-          <textarea placeholder='Ask here... ' />
+          <textarea placeholder='Ask here... ' onChange={(e) => setQuestion(e.target.value)} />
         </div>
         <button id="ask-btn" onClick={() => setCount((count) => count + 1)}>
           Ask
