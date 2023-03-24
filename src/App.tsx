@@ -48,6 +48,16 @@ function App() {
         >
           <textarea placeholder='Ask here... ' onChange={(e) => setQuestion(e.target.value)} />
         </div>
+        <br />
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}
+        >
+          <textarea id="answer-box" placeholder='... ' onChange={(e) => setQuestion(e.target.value)} disabled value={answer} />
+        </div>
         <button id="ask-btn" onClick={getAnswerFromOpenAI}>
           Ask
         </button>
