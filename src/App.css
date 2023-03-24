@@ -59,15 +59,19 @@
 }
 
 .input-card > input::placeholder {
-  color: #e7e7e7;
+  color: #b3b3b3;
 }
 
 .card > textarea {
   width: 100%;
-  height: 180px;
+  height: 150px;
   font-size: 1.5em;
   padding: 0.25em;
   border: 4px solid #756d6d;
   border-radius: 6px;
   margin-right: 1em;
+}
+
+.card > textarea::placeholder {
+  color: #b3b3b3;
 }
