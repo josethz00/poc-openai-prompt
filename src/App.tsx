@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://chat.openai.com/" target="_blank">
           <img src={openAiLogo} className="logo" alt="Open AI logo" />
         </a>
         <a href="https://reactjs.org" target="_blank">
