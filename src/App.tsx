@@ -8,6 +8,7 @@ function App() {
   const [key, setKey] = useState('')
   const [question, setQuestion] = useState('')
   const [answer, setAnswer] = useState('')
+  const [isKeyVisible, setIsKeyVisible] = useState(true)
 
   const getAnswerFromOpenAI = async () => {
     const model = new OpenAI({
@@ -34,9 +35,10 @@ function App() {
       <h1>AI Questions & Answers</h1>
       <div className="card">
         <div className="input-card">
-          <input type="text" placeholder='Paste you API Key here... ' onChange={(e) => setKey(e.target.value)} />
-          <button onClick={() => {}}>
-            Save key
+          <input type="text" placeholder={isKeyVisible ? 'Paste your Open-AI key here...' : '************'}
+           onChange={(e) => setKey(e.target.value)} value={isKeyVisible ? key : ''} disabled={!isKeyVisible} />
+          <button onClick={() => setIsKeyVisible(!isKeyVisible)}>
+            {isKeyVisible ? 'Save Key' : 'Edit Key'}
           </button>
         </div>
         <div
