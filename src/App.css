@@ -35,6 +35,7 @@
 
 .card {
   padding: 2em;
+  width: 650px;
 }
 
 .read-the-docs {
@@ -62,16 +63,25 @@
   color: #b3b3b3;
 }
 
-.card > textarea {
-  width: 100%;
-  height: 150px;
+.card > div > textarea {
+  height: 130px;
   font-size: 1.5em;
   padding: 0.25em;
   border: 4px solid #756d6d;
   border-radius: 6px;
-  margin-right: 1em;
 }
 
-.card > textarea::placeholder {
+.card > div > textarea::placeholder {
   color: #b3b3b3;
+}
+
+.card > #ask-btn {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 0.6em;
 }

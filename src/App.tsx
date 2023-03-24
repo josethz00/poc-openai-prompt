@@ -24,11 +24,19 @@ function App() {
             Save key
           </button>
         </div>
-        <textarea placeholder='Paste your question here... ' />
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}
+        >
+          <textarea placeholder='Ask here... ' />
+        </div>
+        <button id="ask-btn" onClick={() => setCount((count) => count + 1)}>
+          Ask
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }
