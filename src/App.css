@@ -64,15 +64,17 @@
 }
 
 .card > div > textarea {
-  height: 130px;
+  height: 70px;
   font-size: 1.5em;
   padding: 0.25em;
   border: 4px solid #756d6d;
   border-radius: 6px;
 }
 
-.card > div > textarea::placeholder {
-  color: #b3b3b3;
+.card > div > textarea#answer-box {
+  height: 200px;
+  padding: 0em 0.9em;
+  background-color: #3f3f3f;
 }
 
 .card > #ask-btn {
