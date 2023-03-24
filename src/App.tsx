@@ -7,6 +7,19 @@ import { OpenAI } from 'langchain/llms'
 function App() {
   const [key, setKey] = useState('')
   const [question, setQuestion] = useState('')
+  const [answer, setAnswer] = useState('')
+
+  const getAnswerFromOpenAI = async () => {
+    const model = new OpenAI({
+      openAIApiKey: key,
+    })
+
+    const res = await model.call(
+      question,
+    )
+    console.log(res)
+    setAnswer(res)
+  }
 
   return (
     <div className="App">
@@ -35,7 +48,7 @@ function App() {
         >
           <textarea placeholder='Ask here... ' onChange={(e) => setQuestion(e.target.value)} />
         </div>
-        <button id="ask-btn" onClick={() => setCount((count) => count + 1)}>
+        <button id="ask-btn" onClick={getAnswerFromOpenAI}>
           Ask
         </button>
       </div>
