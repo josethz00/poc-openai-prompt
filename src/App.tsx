@@ -10,7 +10,7 @@ function App() {
 
   const getAnswerFromOpenAI = async () => {
     const model = new OpenAI({
-      openAIApiKey: key,
+      openAIApiKey: import.meta.env.VITE_OPENAI_API_KEY,
     })
 
     const res = await model.call(
