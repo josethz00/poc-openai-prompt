@@ -5,10 +5,8 @@ import './App.css'
 import { OpenAI } from 'langchain/llms'
 
 function App() {
-  const [key, setKey] = useState('')
   const [question, setQuestion] = useState('')
   const [answer, setAnswer] = useState('')
-  const [isKeyVisible, setIsKeyVisible] = useState(true)
 
   const getAnswerFromOpenAI = async () => {
     const model = new OpenAI({
